@@ -11,6 +11,7 @@ tqdm
 ensure==1.0.2
 joblib
 types-PyYAML
+scipy
 -e .
 
 ## Dev requirements
