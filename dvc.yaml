@@ -37,3 +37,17 @@ stages:
       - AUGMENTATION
     outs:
       - artifacts/training/model.h5
+
+  evaluation:
+    cmd: python src/deepClassifier/pipeline/stage_04_evaluation.py
+    deps:
+      - src/deepClassifier/pipeline/stage_04_evaluation.py
+      - configs/config.yaml
+      - artifacts/data_ingestion/PetImages
+      - artifacts/training/model.h5
+    params:
+      - IMAGE_SIZE
+      - BATCH_SIZE
+    metrics:
+    - scores.json:
+        cache: false
