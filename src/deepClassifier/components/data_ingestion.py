@@ -43,3 +43,9 @@ class DataIngestion:
             updated_list_of_files = self._get_updated_list_of_files(list_of_files)
             for f in tqdm(updated_list_of_files):
                 self._preprocess(zf, f, self.config.unzip_dir)
+
+    def create_test_data(self):
+        """
+        separte 30% of data into test data
+        """
+        pass
