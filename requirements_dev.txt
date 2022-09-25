@@ -12,6 +12,7 @@ ensure==1.0.2
 joblib
 types-PyYAML
 scipy
+mlflow==1.26.1
 -e .
 
 ## Dev requirements
